@@ -15,5 +15,7 @@ try {
 }
 app.use(express.json);
 app.use(router);
-const port = process.env.PORT || 5000 ;
-app.listen(port, ()=>console.log('Service running at port '+port));
+const PORT = 5000
+app.listen(PORT, 'localhost', () => {
+  console.log(`Server running on port ${PORT}`)
+})
